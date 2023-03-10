@@ -2,6 +2,13 @@
   <div class="container">
     <h1>My movie lists</h1>
     <p>These are the movie playlists I created</p>
-    <a class="btn btn-flat" href="#">Click me for no result at all</a>
+    <a class="btn btn-primary" href="#">Add new list</a>
   </div>
 </div>
+
+<h2>This is the list:</h2>
+  <ul>
+    <% @lists.each do |list| %>
+    <li><%= list.name %></li>
+    <% end %>
+  </ul>
