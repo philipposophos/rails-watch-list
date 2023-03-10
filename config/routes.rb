@@ -4,10 +4,11 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  # As a user, I can see all my movie lists
+  # [X] As a user, I can see all my movie lists
+  # [ ] As a user, I can create a movie list
+  # [ ] As a user, I can see the details of a movie list
   root to: 'lists#index'
 
-  resources :lists, only: [:index]
-  # As a user, I can create a movie list
-  # As a user, I can see the details of a movie list
+  resources :lists, only: %i[index show new create]
+
 end
