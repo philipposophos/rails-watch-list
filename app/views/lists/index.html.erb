@@ -2,13 +2,13 @@
   <div class="container">
     <h1>My movie lists</h1>
     <p>These are the movie playlists I created</p>
-    <a class="btn btn-primary" href="#">Add new list</a>
+    <%= link_to "Add new list", new_list_path, class: "btn btn-primary" %>
   </div>
 </div>
 
 <h2>These are my movie lists:</h2>
 <ul>
   <% @lists.each do |list| %>
-  <li><%= list.name %></li>
+    <li><%= link_to list.name, list_path(list) %></li>
   <% end %>
 </ul>
